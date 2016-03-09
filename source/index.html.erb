@@ -1,10 +1,267 @@
 ---
-title: Le Wagon Middleman boilerplate
+title: Welcome to Stylus
 ---
 
-<div class="welcome text-center padded">
-  <h1>Middleman is Watching</h1>
-  <p class="doc">
-    <%= link_to "Read Online Documentation", "http://middlemanapp.com/" %>
-  </p><!-- .doc -->
-</div><!-- .welcome -->
+<div id="banner">
+      
+      <div class="container">
+          <div class="row">
+              <div class="col-xs-6">
+                  <h1>Styl.us</h1>
+                  <p>
+                    Turn your pen into you best friend
+                    Make every line you write count..
+                  </p>
+                  <a href="#" class="btn btn-rounded btn-lg">Get your stylus</a>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <div class="bg-gray text-center padded">
+
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-3">
+          	<%= image_tag "paper.svg" %>
+            <h2>Natural writing</h2>
+            <p>
+              Don't change your habits, write with a pen <b>on paper notebooks</b>
+            </p>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-3">
+            <%= image_tag "computer.svg" %>
+            <h2>Sync. copy</h2>
+            <p>
+              Stylus instantaneously copy your text on your computer, <b>in real-time</b>
+            </p>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-3">
+          	<%= image_tag "analytics.svg" %>
+            <h2>Analytics</h2>
+            <p>
+              Get feedbacks on the way you write, <b>your favorite words, your frequent mistakes</b>
+            </p>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-3">
+            <%= image_tag "data.svg" %>
+            <h2>Storing your texts</h2>
+            <p>
+              Verything line writen with your stylus is stored in the cloud, so that <b>it's never lost</b>
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div id="newsletter" class="text-center">
+      
+      <h2>Get news from stylus</h2>
+      <p>
+        Leave us your mail and get stylus news
+      </p>
+      <form class="form-inline" action="">
+        <input class="form-control" type="email" placeholder="example@gmail.com">
+        <input class="btn btn-success" type="submit" value="Subscribe">
+      </form>
+
+    </div>
+
+    <div id="map" style="width: 100%; height: 400px;"></div>
+
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+
+    <script type="text/javascript">
+      var myLatlng = new google.maps.LatLng(48.852937,2.364178);
+
+      var myOptions = {
+        zoom: 16,
+        center: myLatlng,
+        scrollwheel: false,
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        styles: [
+                  {
+                "featureType": "water",
+                "elementType": "geometry",
+                "stylers": [
+                    {
+                        "color": "#e9e9e9"
+                    },
+                    {
+                        "lightness": 17
+                    }
+                ]
+            },
+            {
+                "featureType": "landscape",
+                "elementType": "geometry",
+                "stylers": [
+                    {
+                        "color": "#f5f5f5"
+                    },
+                    {
+                        "lightness": 20
+                    }
+                ]
+            },
+            {
+                "featureType": "road.highway",
+                "elementType": "geometry.fill",
+                "stylers": [
+                    {
+                        "color": "#ffffff"
+                    },
+                    {
+                        "lightness": 17
+                    }
+                ]
+            },
+            {
+                "featureType": "road.highway",
+                "elementType": "geometry.stroke",
+                "stylers": [
+                    {
+                        "color": "#ffffff"
+                    },
+                    {
+                        "lightness": 29
+                    },
+                    {
+                        "weight": 0.2
+                    }
+                ]
+            },
+            {
+                "featureType": "road.arterial",
+                "elementType": "geometry",
+                "stylers": [
+                    {
+                        "color": "#ffffff"
+                    },
+                    {
+                        "lightness": 18
+                    }
+                ]
+            },
+            {
+                "featureType": "road.local",
+                "elementType": "geometry",
+                "stylers": [
+                    {
+                        "color": "#ffffff"
+                    },
+                    {
+                        "lightness": 16
+                    }
+                ]
+            },
+            {
+                "featureType": "poi",
+                "elementType": "geometry",
+                "stylers": [
+                    {
+                        "color": "#f5f5f5"
+                    },
+                    {
+                        "lightness": 21
+                    }
+                ]
+            },
+            {
+                "featureType": "poi.park",
+                "elementType": "geometry",
+                "stylers": [
+                    {
+                        "color": "#dedede"
+                    },
+                    {
+                        "lightness": 21
+                    }
+                ]
+            },
+            {
+                "elementType": "labels.text.stroke",
+                "stylers": [
+                    {
+                        "visibility": "on"
+                    },
+                    {
+                        "color": "#ffffff"
+                    },
+                    {
+                        "lightness": 16
+                    }
+                ]
+            },
+            {
+                "elementType": "labels.text.fill",
+                "stylers": [
+                    {
+                        "saturation": 36
+                    },
+                    {
+                        "color": "#333333"
+                    },
+                    {
+                        "lightness": 40
+                    }
+                ]
+            },
+            {
+                "elementType": "labels.icon",
+                "stylers": [
+                    {
+                        "visibility": "off"
+                    }
+                ]
+            },
+            {
+                "featureType": "transit",
+                "elementType": "geometry",
+                "stylers": [
+                    {
+                        "color": "#f2f2f2"
+                    },
+                    {
+                        "lightness": 19
+                    }
+                ]
+            },
+            {
+                "featureType": "administrative",
+                "elementType": "geometry.fill",
+                "stylers": [
+                    {
+                        "color": "#fefefe"
+                    },
+                    {
+                        "lightness": 20
+                    }
+                ]
+            },
+            {
+                "featureType": "administrative",
+                "elementType": "geometry.stroke",
+                "stylers": [
+                    {
+                        "color": "#fefefe"
+                    },
+                    {
+                        "lightness": 17
+                    },
+                    {
+                        "weight": 1.2
+                    }
+                ]
+            }
+            ] 
+      };
+
+      var map = new google.maps.Map(document.getElementById('map'), myOptions);
+      var marker = new google.maps.Marker({
+        position: myLatlng,
+        map: map,
+        title: "You are here!"
+      });
+    </script>

@@ -19,6 +19,12 @@ $header-font: "Montserrat", "sans-serif";
 // Font-size and line-height
 $base-size: 16px;
 $base-height: 1.4;
+$base-weight: 300;
+$base-weight-headings: 700;
+
+body {
+	font-weight: $base-weight;
+}
 
 /* -------------------------------------
  * Colors
@@ -30,6 +36,7 @@ $yellow: #FDB631;
 $orange: #E67E22;
 $green: #32B796;
 $purple: #6452BD;
+$pumpkin : #FF871F;
 
 // Gray scale
 $gray-darker:  lighten(#000, 13.5%); // #222

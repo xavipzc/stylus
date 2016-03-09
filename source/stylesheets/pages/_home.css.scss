@@ -1,0 +1,20 @@
+#banner {
+	background-image: image-url("background.jpg");
+	background-size: cover;
+	padding: 150px 0px;
+	height: 650px;
+	color: white;
+
+	h1 {
+		font-size: 80px;
+	}
+
+	p {
+		font-size: 30px;
+		width: 500px;
+	}
+}
+
+#newsletter {
+	padding: 100px 20px;
+}
