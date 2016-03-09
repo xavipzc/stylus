@@ -16,5 +16,22 @@
 }
 
 #newsletter {
-	padding: 100px 20px;
+	background-color: $pumpkin;
+	padding: 40px 0;
+}
+
+#testimonials {
+	padding: 60px 0;
+
+	.testimonials {
+		background: white;
+		padding: 40px;
+		margin: 10px;
+		box-shadow: 1px 1px 3px rgb(210,210,210);
+
+		img {
+			width: 40%;
+			margin: 0 auto;
+		}
+	}
 }
