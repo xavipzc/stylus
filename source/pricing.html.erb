@@ -1,0 +1,32 @@
+---
+title: Our products
+---
+
+<div id="products" class="text-center padded">
+        
+	<div class="container">
+	  <div class="row">
+	    <h1>Styl.your Product</h1>
+	    <% data.products.each do |product| %>
+
+	      <!-- HTML div that we want to repeat -->
+	      <div class="col-xs-12 col-sm-6 col-md-3 text-center">
+	        <div class="row">
+	          <div class="col-xs-3 col-sm-12">
+	            <%= image_tag product.picture, class: "img-circle img-responsive center-block" %>
+	          </div>
+	          <div class="col-xs-9 col-sm-12">
+	            <h2>
+	              <%= product.name %>
+	            </h2>
+	            <span class="label label-<%= product.color %> price"><%= product.price %></span>
+	            <p><%= product.summary %></p>
+	          </div>
+	        </div>
+	      </div>
+
+	    <% end %>
+	  </div>
+	</div>
+
+</div>
