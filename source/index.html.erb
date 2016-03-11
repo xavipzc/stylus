@@ -6,44 +6,51 @@ title: Welcome to Stylus
       
       <div class="container">
           <div class="row">
-              <div class="col-xs-6">
+              <div class="col-xs-6 appearIn">
                   <h1>Styl.us</h1>
                   <p>
                     Turn your pen into you best friend
                     Make every line you write count..
                   </p>
-                  <a href="#" class="btn btn-rounded btn-lg">Get your stylus</a>
+                  <a href="#" class="btn btn-rounded btn-lg" data-toggle="modal" data-target="#bannerOrder">Get your stylus</a>
               </div>
           </div>
       </div>
+
+      <div class="text-center" style="position: relative; top: 175px;">
+          <a href="#features">
+              <i class="fa fa-angle-down pulse" style="font-size: 50px; color: white;"></i>
+          </a>
+      </div>
+
     </div>
 
-    <div class="bg-gray text-center padded">
+    <div id="features" class="bg-gray text-center padded">
 
       <div class="container">
         <div class="row">
-          <div class="col-xs-12 col-sm-6 col-md-3">
+          <div class="col-xs-12 col-sm-6 col-md-3 foo">
           	<%= image_tag "paper.svg" %>
             <h2>Natural writing</h2>
             <p>
               Don't change your habits, write with a pen <b>on paper notebooks</b>
             </p>
           </div>
-          <div class="col-xs-12 col-sm-6 col-md-3">
+          <div class="col-xs-12 col-sm-6 col-md-3 foo">
             <%= image_tag "computer.svg" %>
             <h2>Sync. copy</h2>
             <p>
               Stylus instantaneously copy your text on your computer, <b>in real-time</b>
             </p>
           </div>
-          <div class="col-xs-12 col-sm-6 col-md-3">
+          <div class="col-xs-12 col-sm-6 col-md-3 foo">
           	<%= image_tag "analytics.svg" %>
             <h2>Analytics</h2>
             <p>
               Get feedbacks on the way you write, <b>your favorite words, your frequent mistakes</b>
             </p>
           </div>
-          <div class="col-xs-12 col-sm-6 col-md-3">
+          <div class="col-xs-12 col-sm-6 col-md-3 foo">
             <%= image_tag "data.svg" %>
             <h2>Storing your texts</h2>
             <p>
@@ -74,7 +81,7 @@ title: Welcome to Stylus
             <diw class="row">
                 <% data.testimonials.each do |testimonial| %>
                     <div class="col-xs-12 col-sm-6">
-                        <div class="testimonials">
+                        <div class="testimonials expandUp">
                         <%= image_tag testimonial.image_file, class:"img-circle" %>
                         <h3><%= testimonial.name %></h3>
                         <p><%= testimonial.content %></p>
@@ -87,6 +94,49 @@ title: Welcome to Stylus
     </div>
 
     <div id="map" style="width: 100%; height: 400px;"></div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="bannerOrder" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title text-center" id="myModalLabel">Order your Styl.us</h4>
+          </div>
+          <div class="modal-body">
+            <form action="">
+
+                <div class="row">
+                    <div class="col-xs-6">
+                        <div class="form-group">
+                            <label for="firstname">Firstname</label>
+                            <input type="text" class="form-control" placeholder="Bob" id="firstname">
+                        </div>
+                    </div>                    
+                    <div class="col-xs-6">
+                        <div class="form-group">
+                            <label for="lastname">Lastname</label>
+                            <input type="text" class="form-control" placeholder="L'eponge" id="lastname">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" placeholder="bob@example.com" id="email">
+                </div>
+
+                <div class="text-right">
+                <input type="submit" value="Order" class="btn btn-primary">
+
+                <button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
+                </div>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
 
@@ -283,3 +333,12 @@ title: Welcome to Stylus
         title: "You are here!"
       });
     </script>
+
+    <script src="https://cdn.jsdelivr.net/scrollreveal.js/3.1.1/scrollreveal.min.js"></script>
+
+    <script>
+        window.sr = ScrollReveal({ reset: true });
+        sr.reveal('.foo', { duration: 500 });
+    </script>    
+
+    
